@@ -1,2 +1,3 @@
-# TicTacToe_GUI
-This is GUI version of Tic Tac Toe game written in python using tkinter module
+# Python_GUI_pprojects
+This is repo for python GUI projests
+we update this repo on regular basis and upload new projests 
