@@ -1,18 +1,16 @@
 import random as r
-from time import strftime
 from tkinter import *
 from tkinter import messagebox
 
-Q_TXT = ("Verdana",12,"bold")
-TXT_FONT = ("Verdana",35,"bold")
+Q_TXT = ("Verdana",12,"bold")      #Questions font
+TXT_FONT = ("Verdana",35,"bold")    
+#Background and foreground color
 BG = "#F4B8FF"
 FG = "#7343C0"
-FGA = "#2b2b2a"
+
 BGA = "#F4B8FF"
+#Button color
 B_BG = "#D5E8F2"
-
-
-
 
 def gen_question():
     num1 = r.randint(1,100)
@@ -29,7 +27,7 @@ def check_result(num1,num2,operator):
         result = num1 * num2
     return result
 
-def main():
+def main_window():
     frame1 = Frame(root,width=400,height=460,bg=BG)
     frame1.grid(row=0,column=0)
     frame1.propagate(0)
@@ -64,13 +62,13 @@ def question_screen():
 
     opt1,opt2,opt3,opt4 = gen_options(num1,num2,operator)
 
-    r1 = Radiobutton(frame,text=opt1,value=opt1,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,activeforeground=FGA,font=("arial",12,"bold"))
+    r1 = Radiobutton(frame,text=opt1,value=opt1,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,font=("arial",12,"bold"))
     r1.pack(anchor=W,padx=20,pady=10) 
-    r2 = Radiobutton(frame,text=opt2,value=opt2,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,activeforeground=FGA,font=("arial",12,"bold"))
+    r2 = Radiobutton(frame,text=opt2,value=opt2,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,font=("arial",12,"bold"))
     r2.pack(anchor=W,padx=20,pady=10) 
-    r3 = Radiobutton(frame,text=opt3,value=opt3,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,activeforeground=FGA,font=("arial",12,"bold"))
+    r3 = Radiobutton(frame,text=opt3,value=opt3,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,font=("arial",12,"bold"))
     r3.pack(anchor=W,padx=20,pady=10) 
-    r4 = Radiobutton(frame,text=opt4,value=opt4,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,activeforeground=FGA,font=("arial",12,"bold"))
+    r4 = Radiobutton(frame,text=opt4,value=opt4,fg="#7343C0",variable=var,justify=LEFT,bg=BG,activebackground=BGA,font=("arial",12,"bold"))
     r4.pack(anchor=W,padx=20,pady=10) 
 
     result = check_result(num1,num2,operator)
@@ -85,10 +83,10 @@ def gen_options(num1,num2,operator):
 def exit_quiz():
     choice = messagebox.askyesno("Math Quiz","Do you want to Quit the Quiz :( ")
     if choice:
-        main()
+        main_window()
 
 root = Tk()
 root.title("Math Quiz")
 root.resizable(0,0)
-main()
+main_window()
 root.mainloop()
