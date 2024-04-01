@@ -1,3 +1,4 @@
 # Python_GUI_projects
-This is repo for python GUI projests
-we update this repo on regular basis and upload new projests 
+This repo for python GUI projests
+I update repo on regular basis and upload new projests
+Till than peace out!!! 
